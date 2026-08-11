@@ -1,14 +1,17 @@
-# opencode GitHub Action
+# Mobarrez Code GitHub Action
 
-A GitHub Action that integrates [opencode](https://opencode.ai) directly into your GitHub workflow.
+A GitHub Action that integrates [Mobarrez Code](https://github.com/anomalyco/opencode) directly into your GitHub workflow.
 
-Mention `/opencode` in your comment, and opencode will execute tasks within your GitHub Actions runner.
+Mention `/opencode` (or the configured trigger) in your comment, and the agent will execute tasks within your GitHub Actions runner.
+
+> [!NOTE]
+> Mobarrez Code is a fork of `sst/opencode`. The GitHub Action shipped here uses the upstream `anomalyco/opencode` GitHub App and workflow image; rebranding the action's public-facing name is on the roadmap. Until then, you can wire it to your own fork's image by replacing `uses: anomalyco/opencode/github@latest` with your own reference.
 
 ## Features
 
 #### Explain an issue
 
-Leave the following comment on a GitHub issue. `opencode` will read the entire thread, including all comments, and reply with a clear explanation.
+Leave the following comment on a GitHub issue. The agent will read the entire thread, including all comments, and reply with a clear explanation.
 
 ```
 /opencode explain this issue
@@ -16,7 +19,7 @@ Leave the following comment on a GitHub issue. `opencode` will read the entire t
 
 #### Fix an issue
 
-Leave the following comment on a GitHub issue. opencode will create a new branch, implement the changes, and open a PR with the changes.
+Leave the following comment on a GitHub issue. The agent will create a new branch, implement the changes, and open a PR with the changes.
 
 ```
 /opencode fix this
@@ -24,7 +27,7 @@ Leave the following comment on a GitHub issue. opencode will create a new branch
 
 #### Review PRs and make changes
 
-Leave the following comment on a GitHub PR. opencode will implement the requested change and commit it to the same PR.
+Leave the following comment on a GitHub PR. The agent will implement the requested change and commit it to the same PR.
 
 ```
 Delete the attachment from S3 when the note is removed /oc
@@ -32,21 +35,21 @@ Delete the attachment from S3 when the note is removed /oc
 
 #### Review specific code lines
 
-Leave a comment directly on code lines in the PR's "Files" tab. opencode will automatically detect the file, line numbers, and diff context to provide precise responses.
+Leave a comment directly on code lines in the PR's "Files" tab. The agent will automatically detect the file, line numbers, and diff context to provide precise responses.
 
 ```
 [Comment on specific lines in Files tab]
 /oc add error handling here
 ```
 
-When commenting on specific lines, opencode receives:
+When commenting on specific lines, the agent receives:
 
 - The exact file being reviewed
 - The specific lines of code
 - The surrounding diff context
 - Line number information
 
-This allows for more targeted requests without needing to specify file paths or line numbers manually.
+This allows more targeted requests without needing to specify file paths or line numbers manually.
 
 ## Installation
 
@@ -101,7 +104,7 @@ This will walk you through installing the GitHub app, creating the workflow, and
 
 ## Support
 
-This is an early release. If you encounter issues or have feedback, please create an issue at https://github.com/anomalyco/opencode/issues.
+This is an early release for the Mobarrez Code fork. If you encounter issues or have feedback, please create an issue at https://github.com/anomalyco/opencode/issues (upstream) or contact a Mobarrez Code maintainer for fork-specific problems.
 
 ## Development
 
@@ -121,15 +124,15 @@ To test locally:
      GITHUB_RUN_ID=dummy \
      MOCK_TOKEN=github_pat_1234567890 \
      MOCK_EVENT='{"eventName":"issue_comment",...}' \
-     bun /path/to/opencode/github/index.ts
+     bun /path/to/mobarrez-code/github/index.ts
    ```
 
-   - `MODEL`: The model used by opencode. Same as the `MODEL` defined in the GitHub workflow.
+   - `MODEL`: The model used by the agent. Same as the `MODEL` defined in the GitHub workflow.
    - `ANTHROPIC_API_KEY`: Your model provider API key. Same as the keys defined in the GitHub workflow.
    - `GITHUB_RUN_ID`: Dummy value to emulate GitHub action environment.
    - `MOCK_TOKEN`: A GitHub personal access token. This token is used to verify you have `admin` or `write` access to the test repo. Generate a token [here](https://github.com/settings/personal-access-tokens).
    - `MOCK_EVENT`: Mock GitHub event payload (see templates below).
-   - `/path/to/opencode`: Path to your cloned opencode repo. `bun /path/to/opencode/github/index.ts` runs your local version of `opencode`.
+   - `/path/to/mobarrez-code`: Path to your cloned Mobarrez Code repo. `bun /path/to/mobarrez-code/github/index.ts` runs your local version.
 
 ### Issue comment event
 
