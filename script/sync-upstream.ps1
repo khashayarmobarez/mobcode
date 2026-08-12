@@ -38,7 +38,7 @@
     Local branch to sync into. Default: dev
 
 .EXAMPLE
-    pwsh ./script/sync-upstream.ps1
+    powershell.exe -ExecutionPolicy Bypass -File ./script/sync-upstream.ps1
     Run the full sync.
 
 .EXAMPLE
