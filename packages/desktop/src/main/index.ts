@@ -51,9 +51,9 @@ import { startBackgroundCli } from "./background-cli"
 import { setNativeTranslations } from "./native-translations"
 
 const APP_NAMES: Record<string, string> = {
-  dev: "OpenCode Dev",
-  beta: "OpenCode Beta",
-  prod: "OpenCode",
+  dev: "MobCode Dev",
+  beta: "MobCode Beta",
+  prod: "MobCode",
 }
 const APP_IDS: Record<string, string> = {
   dev: "ai.opencode.desktop.dev",
