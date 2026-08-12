@@ -42,7 +42,7 @@
     Run the full sync.
 
 .EXAMPLE
-    pwsh ./script/sync-upstream.ps1 -DryRun
+    powershell.exe -ExecutionPolicy Bypass -File ./script/sync-upstream.ps1 -DryRun
     See what would change without touching anything.
 
 .EXAMPLE
