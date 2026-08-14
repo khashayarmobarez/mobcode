@@ -94,6 +94,9 @@ const require = __cjs_mod__.createRequire(import.meta.url);
     plugins: [appPlugin, sentry],
     publicDir: "../../../app/public",
     root: "src/renderer",
+    server: {
+      host: "127.0.0.1",
+    },
     build: {
       sourcemap: true,
       rollupOptions: {
