@@ -131,6 +131,14 @@ export const dict = {
   "dialog.model.unpaid.addMore.title": "Add more models from popular providers",
   "dialog.model.unpaid.viewMoreProviders": "See 70+ more providers",
 
+  "dialog.mobcode.plans.title": "MobCode subscription plans",
+  "dialog.mobcode.plans.section": "Plans (billed in Toman)",
+  "dialog.mobcode.plans.popular": "Most popular",
+  "dialog.mobcode.plans.buy": "Buy subscription",
+  "dialog.mobcode.plans.credits": "Credit balance",
+  "dialog.mobcode.plans.insufficient": "Your credit balance is not enough to use this model. Top up your account to continue.",
+  "dialog.mobcode.plans.byok": "Or connect your own API key",
+
   "dialog.provider.viewAll": "Show more providers",
 
   "provider.connect.title": "Connect {{provider}}",

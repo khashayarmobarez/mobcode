@@ -53,12 +53,12 @@ function View(props: { api: TuiPluginApi; sessionID: string }) {
                 ✕
               </text>
             </box>
-            <text fg={theme().textMuted}>MobCode includes free models so you can start immediately.</text>
+            <text fg={theme().textMuted}>با اشتراک‌های موب‌کد شروع کنید — مدل‌ها به تومان.</text>
             <text fg={theme().textMuted}>
-              Connect from 75+ providers to use other models, including Claude, GPT, Gemini etc
+              یا کلید API خود را از ۷۵+ سرویس‌دهنده متصل کنید: Claude ،GPT ،Gemini و بیشتر
             </text>
             <box flexDirection="row" gap={1} justifyContent="space-between">
-              <text fg={theme().text}>Connect provider</text>
+              <text fg={theme().text}>اتصال سرویس‌دهنده</text>
               <text fg={theme().textMuted}>/connect</text>
             </box>
           </box>
@@ -69,7 +69,7 @@ function View(props: { api: TuiPluginApi; sessionID: string }) {
         <span style={{ fg: theme().text }}>{path().name}</span>
       </text>
       <text fg={theme().textMuted}>
-        <span style={{ fg: theme().success }}>•</span> <b>Open</b>
+        <span style={{ fg: theme().success }}>•</span> <b>Mob</b>
         <span style={{ fg: theme().text }}>
           <b>Code</b>
         </span>{" "}

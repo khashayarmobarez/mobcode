@@ -17,6 +17,7 @@ import { GroqPlugin } from "./provider/groq"
 import { KiloPlugin } from "./provider/kilo"
 import { LLMGatewayPlugin } from "./provider/llmgateway"
 import { MistralPlugin } from "./provider/mistral"
+import { MobCodePlugin } from "./provider/mobcode"
 import { NvidiaPlugin } from "./provider/nvidia"
 import { OpenAIPlugin } from "./provider/openai"
 import { SnowflakeCortexPlugin } from "./provider/snowflake-cortex"
@@ -54,6 +55,7 @@ export const ProviderPlugins: PluginInternal.Plugin<PluginInternal.Requirements 
   KiloPlugin,
   LLMGatewayPlugin,
   MistralPlugin,
+  MobCodePlugin,
   NvidiaPlugin,
   OpencodePlugin,
   SnowflakeCortexPlugin,
