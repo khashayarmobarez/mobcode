@@ -120,8 +120,8 @@ export const DialogMobCodePlans: Component<{ model?: ModelState }> = (props) => 
             <Show when={account.state === "ready" && account().connected}>
               <div class="flex w-full flex-row items-center justify-between px-3 py-1.5 text-[12.5px] text-v2-text-text-muted">
                 <span>{language.t("dialog.mobcode.plans.credits")}</span>
-                <span dir="ltr">
-                  {new Intl.NumberFormat(fa() ? "fa-IR" : "en-US").format(account().credits)}
+<span dir="ltr">
+                  {new Intl.NumberFormat(fa() ? "fa-IR" : "en-US").format(account()?.credits ?? 0)}
                 </span>
               </div>
             </Show>
