@@ -2,10 +2,11 @@
 
 This is the developer guide for **Mobarrez Code**: a Persian-localized fork of [`sst/opencode`](https://github.com/sst/opencode) (MIT) with Toman billing and a local model gateway.
 
-If you just want to *use* the product, read the [README](./README.md) instead. This file is for people who want to **understand**, **develop**, or **test** the codebase.
+If you just want to _use_ the product, read the [README](./README.md) instead. This file is for people who want to **understand**, **develop**, or **test** the codebase.
 
 > [!TIP]
 > **TL;DR — there are three runnable surfaces, all powered by one core:**
+>
 > 1. **Terminal app (CLI/TUI)** — `packages/opencode` — runs in your terminal.
 > 2. **Desktop app** — `packages/desktop` + `packages/app` — an Electron window around a SolidJS web UI.
 > 3. **Headless server** — `packages/opencode` (the `opencode serve` command) — exposes the API over HTTP/SSE on `:4096`; both the TUI and the desktop app talk to it.
@@ -56,28 +57,28 @@ That's the whole shape. Everything else either supports these pieces or is inter
 
 ## 2. Where each product lives
 
-| Product / Surface | Folder | What it is |
-| --- | --- | --- |
-| **Terminal app (CLI + TUI)** | [`packages/opencode`](packages/opencode) | The `opencode` binary. Runs the agent loop, the headless server, and the terminal UI. |
-| **TUI primitives** | [`packages/tui`](packages/tui) | Reusable terminal-UI components, contexts, themes, and feature plugins (SolidJS + opentui). |
-| **Web UI (rendered in Electron)** | [`packages/app`](packages/app) | The SolidJS web app shown inside the desktop window. Also served by `opencode web`. |
-| **Desktop app shell** | [`packages/desktop`](packages/desktop) | Electron main/preload, window management, auto-updater, native menus, and `electron-builder` config. |
-| **Headless API server** | `packages/opencode` (`opencode serve`) | HTTP/SSE API on port 4096. Used by both the TUI and the web app. |
-| **LLM core (provider-neutral)** | [`packages/llm`](packages/llm) | Schema-first request/event/tool language with provider adapters (OpenAI, Anthropic, Gemini, Bedrock, etc.). |
-| **Core shared services** | [`packages/core`](packages/core) | Database/storage, pty, filesystem, Effect layers, and the session runner used across packages. |
-| **HTTP API server logic** | [`packages/server`](packages/server) | The server-side Effect `HttpApi` definitions. |
-| **HTTP API protocol/schema** | [`packages/protocol`](packages/protocol), [`packages/schema`](packages/schema) | Authoritative endpoint/schemas shared by server and SDK. |
-| **Generated SDK + client** | [`packages/client`](packages/client), `packages/sdk`, [`packages/sdk-next`](packages/sdk-next) | Typed clients consumed by the web app and external tools. |
-| **Shared web UI components** | [`packages/ui`](packages/ui) | Buttons, markdown, icons, themes — used by `app` and `tui`. |
-| **Session UI (shared)** | [`packages/session-ui`](packages/session-ui) | The session/timeline surface reused by both app and TUI. |
-| **Plugin SDK** | [`packages/plugin`](packages/plugin) | Source for `@opencode-ai/plugin` — the toolkit for authoring TUI and agent plugins. |
-| **Confined code execution** | [`packages/codemode`](packages/codemode) | Effect-native sandbox where a model writes small JS programs that can only call host-supplied tools. |
-| **HTTP recorder (cassettes)** | [`packages/http-recorder`](packages/http-recorder) | Records/replays provider HTTP used by `packages/llm` tests. |
-| **HTTP API codegen** | [`packages/httpapi-codegen`](packages/httpapi-codegen) | Build-time codegen from the Effect `HttpApi` to client + OpenAPI. |
-| **Brand & logo assets** | [`packages/identity`](packages/identity) | Logo marks (light/dark/SVG/PNG) for Mobarrez Code. |
-| **Desktop icons** | [`packages/desktop/icons`](packages/desktop/icons) | `dev` / `beta` / `prod` icon sets. Re-sync when `identity` changes. |
-| **Docs content (Mintlify)** | [`packages/docs`](packages/docs) | The public docs site content. |
-| **Billing reference (read-only)** | [`packages/console`](packages/console) | Upstream opencode's hosted billing backend (SST/Cloudflare). Reference architecture only — not dragged along as-is. |
+| Product / Surface                 | Folder                                                                                         | What it is                                                                                                          |
+| --------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Terminal app (CLI + TUI)**      | [`packages/opencode`](packages/opencode)                                                       | The `opencode` binary. Runs the agent loop, the headless server, and the terminal UI.                               |
+| **TUI primitives**                | [`packages/tui`](packages/tui)                                                                 | Reusable terminal-UI components, contexts, themes, and feature plugins (SolidJS + opentui).                         |
+| **Web UI (rendered in Electron)** | [`packages/app`](packages/app)                                                                 | The SolidJS web app shown inside the desktop window. Also served by `opencode web`.                                 |
+| **Desktop app shell**             | [`packages/desktop`](packages/desktop)                                                         | Electron main/preload, window management, auto-updater, native menus, and `electron-builder` config.                |
+| **Headless API server**           | `packages/opencode` (`opencode serve`)                                                         | HTTP/SSE API on port 4096. Used by both the TUI and the web app.                                                    |
+| **LLM core (provider-neutral)**   | [`packages/llm`](packages/llm)                                                                 | Schema-first request/event/tool language with provider adapters (OpenAI, Anthropic, Gemini, Bedrock, etc.).         |
+| **Core shared services**          | [`packages/core`](packages/core)                                                               | Database/storage, pty, filesystem, Effect layers, and the session runner used across packages.                      |
+| **HTTP API server logic**         | [`packages/server`](packages/server)                                                           | The server-side Effect `HttpApi` definitions.                                                                       |
+| **HTTP API protocol/schema**      | [`packages/protocol`](packages/protocol), [`packages/schema`](packages/schema)                 | Authoritative endpoint/schemas shared by server and SDK.                                                            |
+| **Generated SDK + client**        | [`packages/client`](packages/client), `packages/sdk`, [`packages/sdk-next`](packages/sdk-next) | Typed clients consumed by the web app and external tools.                                                           |
+| **Shared web UI components**      | [`packages/ui`](packages/ui)                                                                   | Buttons, markdown, icons, themes — used by `app` and `tui`.                                                         |
+| **Session UI (shared)**           | [`packages/session-ui`](packages/session-ui)                                                   | The session/timeline surface reused by both app and TUI.                                                            |
+| **Plugin SDK**                    | [`packages/plugin`](packages/plugin)                                                           | Source for `@opencode-ai/plugin` — the toolkit for authoring TUI and agent plugins.                                 |
+| **Confined code execution**       | [`packages/codemode`](packages/codemode)                                                       | Effect-native sandbox where a model writes small JS programs that can only call host-supplied tools.                |
+| **HTTP recorder (cassettes)**     | [`packages/http-recorder`](packages/http-recorder)                                             | Records/replays provider HTTP used by `packages/llm` tests.                                                         |
+| **HTTP API codegen**              | [`packages/httpapi-codegen`](packages/httpapi-codegen)                                         | Build-time codegen from the Effect `HttpApi` to client + OpenAPI.                                                   |
+| **Brand & logo assets**           | [`packages/identity`](packages/identity)                                                       | Logo marks (light/dark/SVG/PNG) for Mobarrez Code.                                                                  |
+| **Desktop icons**                 | [`packages/desktop/icons`](packages/desktop/icons)                                             | `dev` / `beta` / `prod` icon sets. Re-sync when `identity` changes.                                                 |
+| **Docs content (Mintlify)**       | [`packages/docs`](packages/docs)                                                               | The public docs site content.                                                                                       |
+| **Billing reference (read-only)** | [`packages/console`](packages/console)                                                         | Upstream opencode's hosted billing backend (SST/Cloudflare). Reference architecture only — not dragged along as-is. |
 
 ---
 
@@ -86,7 +87,7 @@ That's the whole shape. Everything else either supports these pieces or is inter
 ### Requirements
 
 - **Bun 1.3+** (the only supported runtime — not Node).
-- On Windows, you'll also want **Visual Studio Build Tools** with the *Desktop development with C++* workload, because some native deps (`tree-sitter-powershell`, `node-pty`, `@parcel/watcher`) need to compile.
+- On Windows, you'll also want **Visual Studio Build Tools** with the _Desktop development with C++_ workload, because some native deps (`tree-sitter-powershell`, `node-pty`, `@parcel/watcher`) need to compile.
 
 ### Install & run
 
@@ -120,7 +121,7 @@ bun run --cwd packages/app dev -- --port 4444
 ```
 
 > [!IMPORTANT]
-> `opencode dev web` proxies `https://app.opencode.ai`, so *local UI/CSS changes will not show there*. For local UI work, run the backend and app dev servers separately as shown above.
+> `opencode dev web` proxies `https://app.opencode.ai`, so _local UI/CSS changes will not show there_. For local UI work, run the backend and app dev servers separately as shown above.
 
 ---
 
@@ -138,15 +139,15 @@ bun run lint         # oxlint
 
 ### Per-package test commands
 
-| Package | Command (run from the package dir) |
-| --- | --- |
-| `packages/opencode` | `bun test --timeout 30000 --only-failures` |
-| `packages/core` | `bun test --only-failures` |
-| `packages/llm` | `bun test --timeout 30000 --only-failures` |
-| `packages/ui` | `bun test src --only-failures` |
-| `packages/app` (unit) | `bun run test:unit` |
-| `packages/app` (browser) | `bun run test:browser` |
-| `packages/app` (E2E) | `bun run test:e2e:local` |
+| Package                  | Command (run from the package dir)         |
+| ------------------------ | ------------------------------------------ |
+| `packages/opencode`      | `bun test --timeout 30000 --only-failures` |
+| `packages/core`          | `bun test --only-failures`                 |
+| `packages/llm`           | `bun test --timeout 30000 --only-failures` |
+| `packages/ui`            | `bun test src --only-failures`             |
+| `packages/app` (unit)    | `bun run test:unit`                        |
+| `packages/app` (browser) | `bun run test:browser`                     |
+| `packages/app` (E2E)     | `bun run test:e2e:local`                   |
 
 The Playwright E2E suite in `packages/app` expects a backend at `localhost:4096` and a Vite dev server at `localhost:3000` by default. Install browsers once with `bunx playwright install chromium`.
 
@@ -280,4 +281,4 @@ See [`mobarrez-code-build-plan.md`](./mobarrez-code-build-plan.md) for the full 
 
 ---
 
-*Mobarrez Code is a fork of `sst/opencode` (MIT). The MIT copyright notice is preserved in [`LICENSE`](./LICENSE).*
+_Mobarrez Code is a fork of `sst/opencode` (MIT). The MIT copyright notice is preserved in [`LICENSE`](./LICENSE)._
