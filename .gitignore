@@ -28,7 +28,39 @@ target
 
 # Local dev files
 opencode-dev
+mobcode-dev
 UPCOMING_CHANGELOG.md
 logs/
 *.bun-build
 tsconfig.tsbuildinfo
+
+# Env files
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test / coverage
+coverage/
+.coverage
+*.lcov
+playwright-report/
+test-results/
+
+# Build caches
+.cache/
+.turbo cache
+**/*.tsbuildinfo
+
+# OS / editor
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# MobCode billing dev (stub cache, local plan overrides)
+.mobcode/

@@ -211,6 +211,15 @@ export const dict = {
   "dialog.model.unpaid.addMore.title": "مدل های بیشتری از ارائه دهندگان محبوب اضافه کنید",
   "dialog.model.unpaid.viewMoreProviders": "70+ ارائه‌دهنده دیگر را ببینید",
   "dialog.provider.viewAll": "نمایش ارائه دهندگان بیشتر",
+
+  "dialog.mobcode.plans.title": "پلن‌های اشتراک موب‌کد",
+  "dialog.mobcode.plans.section": "پلن‌ها (صورتحساب به تومان)",
+  "dialog.mobcode.plans.popular": "محبوب‌ترین",
+  "dialog.mobcode.plans.buy": "خرید اشتراک",
+  "dialog.mobcode.plans.credits": "موجودی اعتبار",
+  "dialog.mobcode.plans.insufficient": "موجودی اعتبار شما برای استفاده از این مدل کافی نیست. برای ادامه، حساب خود را شارژ کنید.",
+  "dialog.mobcode.plans.byok": "یا کلید API خود را متصل کنید",
+
   "provider.connect.title": "{{provider}} را وصل کنید",
   "provider.connect.title.anthropicProMax": "با Claude Pro/Max وارد شوید",
   "provider.connect.selectMethod": "روش ورود برای {{provider}} را انتخاب کنید.",
