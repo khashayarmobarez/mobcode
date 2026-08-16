@@ -43,6 +43,43 @@ function run(target) {
   })
 }
 
+function runBun(entry) {
+  const bun = process.env.BUN_PATH || "bun"
+  const child = childProcess.spawn(bun, ["run", "--conditions=browser", entry, ...process.argv.slice(2)], {
+    stdio: "inherit",
+  })
+
+  child.on("error", (error) => {
+    console.error(error.message)
+    process.exit(1)
+  })
+
+  const forwarders = {}
+  for (const signal of forwardedSignals) {
+    forwarders[signal] = () => {
+      try {
+        child.kill(signal)
+      } catch {
+        // The child may have already exited.
+      }
+    }
+    process.on(signal, forwarders[signal])
+  }
+
+  child.on("exit", (code, signal) => {
+    for (const forwardedSignal of forwardedSignals) {
+      process.removeListener(forwardedSignal, forwarders[forwardedSignal])
+    }
+
+    if (signal) {
+      process.kill(process.pid, signal)
+      return
+    }
+
+    process.exit(typeof code === "number" ? code : 0)
+  })
+}
+
 const envPath = process.env.OPENCODE_BIN_PATH
 
 const scriptPath = fs.realpathSync(__filename)
@@ -188,6 +225,10 @@ function findBinary(startDir) {
 
 const resolved = envPath || (fs.existsSync(cached) ? cached : findBinary(scriptDir))
 if (!resolved) {
+  const srcIndex = path.join(scriptDir, "..", "src", "index.ts")
+  if (fs.existsSync(srcIndex)) {
+    return runBun(srcIndex)
+  }
   console.error(
     "It seems that your package manager failed to install the right version of the opencode CLI for your platform. You can try manually installing " +
       names.map((n) => `\"${n}\"`).join(" or ") +

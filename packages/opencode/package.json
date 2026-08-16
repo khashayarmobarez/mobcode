@@ -16,7 +16,7 @@
     "dev:temporary": "bun run --conditions=browser ./src/temporary.ts"
   },
   "bin": {
-    "mobcode": "./bin/mobcode"
+    "mobcode": "./bin/mobcode.cjs"
   },
   "exports": {
     "./*": "./src/*.ts"

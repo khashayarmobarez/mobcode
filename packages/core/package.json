@@ -13,7 +13,7 @@
     "typecheck": "tsgo --noEmit"
   },
   "bin": {
-    "mobcode": "./bin/mobcode"
+    "mobcode": "./bin/mobcode.cjs"
   },
   "exports": {
     "./effect/layer-node": "./src/effect/layer-node.ts",
