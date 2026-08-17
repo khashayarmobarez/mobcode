@@ -398,7 +398,7 @@ export const dict = {
   "dialog.mcp.description": "Įjungtas {{enabled}} arba {{total}}",
   "dialog.mcp.empty": "MCP nesukonfigūruota",
   "dialog.lsp.empty": "LSP automatiškai aptinkami pagal failų tipus",
-  "dialog.plugins.empty": "Papildiniai sukonfigūruoti opencode.json",
+  "dialog.plugins.empty": "Papildiniai sukonfigūruoti mobcode.json",
   "mcp.status.connected": "prijungtas",
   "mcp.status.failed": "nepavyko",
   "mcp.status.needs_auth": "reikia autentifikavimo",
@@ -666,7 +666,7 @@ export const dict = {
   "error.chain.responseBody": "Atsakymo turinys:\n{{body}}",
   "error.chain.didYouMean": "Ar turėjote omenyje: {{suggestions}}",
   "error.chain.modelNotFound": "Modelis nerastas: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Patikrinkite konfigūracijos (opencode.json) teikėjo / modelio pavadinimus",
+  "error.chain.checkConfig": "Patikrinkite konfigūracijos (mobcode.json) teikėjo / modelio pavadinimus",
   "error.chain.mcpFailed":
     "MCP serveris „{{name}}“ nepavyko. Atminkite, kad MobCode dar nepalaiko MCP autentifikavimo.",
   "error.chain.providerAuthFailed": "Teikėjo autentifikavimas nepavyko ({{provider}}): {{message}}",

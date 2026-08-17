@@ -45,9 +45,15 @@ function run(target) {
 
 function runBun(entry) {
   const bun = process.env.BUN_PATH || "bun"
-  const child = childProcess.spawn(bun, ["run", "--conditions=browser", entry, ...process.argv.slice(2)], {
-    stdio: "inherit",
-  })
+  const pkgDir = path.dirname(path.dirname(entry))
+  const child = childProcess.spawn(
+    bun,
+    ["run", "--conditions=browser", path.relative(pkgDir, entry), ...process.argv.slice(2)],
+    {
+      stdio: "inherit",
+      cwd: pkgDir,
+    },
+  )
 
   child.on("error", (error) => {
     console.error(error.message)

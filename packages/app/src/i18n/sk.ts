@@ -392,7 +392,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} z {{total}} povolených",
   "dialog.mcp.empty": "Nie sú nastavené žiadne MCP",
   "dialog.lsp.empty": "LSP automaticky zistené podľa typov súborov",
-  "dialog.plugins.empty": "Pluginy nastavené v opencode.json",
+  "dialog.plugins.empty": "Pluginy nastavené v mobcode.json",
   "mcp.status.connected": "pripojené",
   "mcp.status.failed": "zlyhalo",
   "mcp.status.needs_auth": "vyžaduje overenie",
@@ -659,7 +659,7 @@ export const dict = {
   "error.chain.responseBody": "Telo odpovede:\n{{body}}",
   "error.chain.didYouMean": "Mysleli ste: {{suggestions}}",
   "error.chain.modelNotFound": "Model nenájdený: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Skontrolujte názvy poskytovateľa/modelu v konfigurácii (opencode.json)",
+  "error.chain.checkConfig": "Skontrolujte názvy poskytovateľa/modelu v konfigurácii (mobcode.json)",
   "error.chain.mcpFailed": "MCP server „{{name}}“ zlyhal. Poznámka: MobCode zatiaľ nepodporuje MCP autentifikáciu.",
   "error.chain.providerAuthFailed": "Autentifikácia poskytovateľa zlyhala ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

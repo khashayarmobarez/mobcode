@@ -394,7 +394,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} av {{total}} aktiverade",
   "dialog.mcp.empty": "Inga MCP:er konfigurerade",
   "dialog.lsp.empty": "LSP:er detekteras automatiskt från filtyper",
-  "dialog.plugins.empty": "Insticksprogram konfigurerade i opencode.json",
+  "dialog.plugins.empty": "Insticksprogram konfigurerade i mobcode.json",
   "mcp.status.connected": "ansluten",
   "mcp.status.failed": "misslyckades",
   "mcp.status.needs_auth": "behöver autentisering",
@@ -666,7 +666,7 @@ export const dict = {
   "error.chain.responseBody": "Svarstext:\n{{body}}",
   "error.chain.didYouMean": "Menade du: {{suggestions}}",
   "error.chain.modelNotFound": "Modellen hittades inte: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Kontrollera leverantörs- och modellnamnen i konfigurationen (opencode.json)",
+  "error.chain.checkConfig": "Kontrollera leverantörs- och modellnamnen i konfigurationen (mobcode.json)",
   "error.chain.mcpFailed": 'MCP-servern "{{name}}" misslyckades. Obs, MobCode stöder inte MCP-autentisering ännu.',
   "error.chain.providerAuthFailed": "Leverantörsautentisering misslyckades ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

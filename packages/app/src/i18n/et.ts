@@ -392,7 +392,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} / {{total}} on lubatud",
   "dialog.mcp.empty": "MCP-sid pole konfigureeritud",
   "dialog.lsp.empty": "LSP-d tuvastatakse failitüüpide järgi automaatselt",
-  "dialog.plugins.empty": "Pluginad on konfigureeritud failis opencode.json",
+  "dialog.plugins.empty": "Pluginad on konfigureeritud failis mobcode.json",
   "mcp.status.connected": "ühendatud",
   "mcp.status.failed": "ebaõnnestunud",
   "mcp.status.needs_auth": "vajab autentimist",
@@ -657,7 +657,7 @@ export const dict = {
   "error.chain.responseBody": "Vastuse keha:\n{{body}}",
   "error.chain.didYouMean": "Kas mõtlesite: {{suggestions}}",
   "error.chain.modelNotFound": "Mudelit ei leitud: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Kontrollige oma konfiguratsiooni (opencode.json) pakkuja/mudeli nimesid",
+  "error.chain.checkConfig": "Kontrollige oma konfiguratsiooni (mobcode.json) pakkuja/mudeli nimesid",
   "error.chain.mcpFailed": 'MCP server "{{name}}" ebaõnnestus. Pange tähele, MobCode ei toeta veel MCP autentimist.',
   "error.chain.providerAuthFailed": "Pakkuja autentimine ebaõnnestus ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

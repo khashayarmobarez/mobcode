@@ -400,7 +400,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} trong số {{total}} đã bật",
   "dialog.mcp.empty": "Không có MCP nào được định cấu hình",
   "dialog.lsp.empty": "LSP được tự động phát hiện từ các loại tệp",
-  "dialog.plugins.empty": "Các plugin được định cấu hình trong opencode.json",
+  "dialog.plugins.empty": "Các plugin được định cấu hình trong mobcode.json",
   "mcp.status.connected": "đã kết nối",
   "mcp.status.failed": "thất bại",
   "mcp.status.needs_auth": "cần xác thực",
@@ -671,7 +671,7 @@ export const dict = {
   "error.chain.responseBody": "Nội dung phản hồi:\n{{body}}",
   "error.chain.didYouMean": "Có phải ý bạn là: {{suggestions}}",
   "error.chain.modelNotFound": "Không tìm thấy mô hình: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Kiểm tra tên nhà cung cấp/mô hình cấu hình (opencode.json) của bạn",
+  "error.chain.checkConfig": "Kiểm tra tên nhà cung cấp/mô hình cấu hình (mobcode.json) của bạn",
   "error.chain.mcpFailed": 'Máy chủ MCP "{{name}}" gặp lỗi. Lưu ý: MobCode chưa hỗ trợ xác thực MCP.',
   "error.chain.providerAuthFailed": "Không xác thực được nhà cung cấp ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

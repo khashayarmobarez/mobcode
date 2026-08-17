@@ -395,7 +395,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} de {{total}} activat",
   "dialog.mcp.empty": "No s'ha configurat cap MCP",
   "dialog.lsp.empty": "Els LSP s'han detectat automàticament a partir dels tipus de fitxers",
-  "dialog.plugins.empty": "Connectors configurats a opencode.json",
+  "dialog.plugins.empty": "Connectors configurats a mobcode.json",
   "mcp.status.connected": "connectat",
   "mcp.status.failed": "fracassat",
   "mcp.status.needs_auth": "necessita autenticació",
@@ -665,7 +665,7 @@ export const dict = {
   "error.chain.responseBody": "Òrgan de resposta:\n{{body}}",
   "error.chain.didYouMean": "Volíeu dir: {{suggestions}}",
   "error.chain.modelNotFound": "No s'ha trobat el model: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Comproveu els noms del vostre proveïdor/model de configuració (opencode.json).",
+  "error.chain.checkConfig": "Comproveu els noms del vostre proveïdor/model de configuració (mobcode.json).",
   "error.chain.mcpFailed":
     'El servidor MCP "{{name}}" ha fallat. Tingueu en compte que MobCode encara no admet l\'autenticació MCP.',
   "error.chain.providerAuthFailed": "L'autenticació del proveïdor ha fallat ({{provider}}): {{message}}",

@@ -423,7 +423,7 @@ export const dict = {
   "dialog.mcp.empty": "Tidak ada MCP yang dikonfigurasi",
 
   "dialog.lsp.empty": "LSP terdeteksi otomatis dari jenis berkas",
-  "dialog.plugins.empty": "Plugin dikonfigurasi di opencode.json",
+  "dialog.plugins.empty": "Plugin dikonfigurasi di mobcode.json",
 
   "mcp.status.connected": "terhubung",
   "mcp.status.failed": "gagal",
@@ -721,7 +721,7 @@ export const dict = {
   "error.chain.responseBody": "Isi respons:\n{{body}}",
   "error.chain.didYouMean": "Maksud Anda: {{suggestions}}",
   "error.chain.modelNotFound": "Model tidak ditemukan: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Periksa nama penyedia/model di konfigurasi Anda (opencode.json)",
+  "error.chain.checkConfig": "Periksa nama penyedia/model di konfigurasi Anda (mobcode.json)",
   "error.chain.mcpFailed": 'Server MCP "{{name}}" gagal. Catatan: MobCode belum mendukung autentikasi MCP.',
   "error.chain.providerAuthFailed": "Autentikasi penyedia gagal ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

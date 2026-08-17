@@ -396,7 +396,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} от {{total}} активирани",
   "dialog.mcp.empty": "Няма конфигурирани MCP",
   "dialog.lsp.empty": "LSPs автоматично разпознати от типове файлове",
-  "dialog.plugins.empty": "Добавки, конфигурирани в opencode.json",
+  "dialog.plugins.empty": "Добавки, конфигурирани в mobcode.json",
   "mcp.status.connected": "свързан",
   "mcp.status.failed": "неуспешно",
   "mcp.status.needs_auth": "се нуждае от авт",
@@ -665,7 +665,7 @@ export const dict = {
   "error.chain.responseBody": "Тяло на отговора:\n{{body}}",
   "error.chain.didYouMean": "Може би имахте предвид: {{suggestions}}",
   "error.chain.modelNotFound": "Моделът не е намерен: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Проверете имената на доставчика/модела на вашата конфигурация (opencode.json).",
+  "error.chain.checkConfig": "Проверете имената на доставчика/модела на вашата конфигурация (mobcode.json).",
   "error.chain.mcpFailed":
     'MCP сървър "{{name}}" не успя. Имайте предвид, че MobCode все още не поддържа MCP удостоверяване.',
   "error.chain.providerAuthFailed": "Неуспешно удостоверяване на доставчика ({{provider}}): {{message}}",

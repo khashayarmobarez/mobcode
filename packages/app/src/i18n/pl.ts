@@ -400,7 +400,7 @@ export const dict = {
   "dialog.mcp.description": "Włączone: {{enabled}} z {{total}}",
   "dialog.mcp.empty": "Brak skonfigurowanych MCP",
   "dialog.lsp.empty": "Serwery LSP są wykrywane automatycznie na podstawie typów plików",
-  "dialog.plugins.empty": "Wtyczki są skonfigurowane w pliku opencode.json",
+  "dialog.plugins.empty": "Wtyczki są skonfigurowane w pliku mobcode.json",
   "mcp.status.connected": "połączono",
   "mcp.status.failed": "błąd",
   "mcp.status.needs_auth": "wymaga autoryzacji",
@@ -653,7 +653,7 @@ export const dict = {
   "error.chain.responseBody": "Treść odpowiedzi:\n{{body}}",
   "error.chain.didYouMean": "Czy miałeś na myśli: {{suggestions}}",
   "error.chain.modelNotFound": "Model nie znaleziony: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Sprawdź nazwy dostawców i modeli w konfiguracji (opencode.json)",
+  "error.chain.checkConfig": "Sprawdź nazwy dostawców i modeli w konfiguracji (mobcode.json)",
   "error.chain.mcpFailed":
     "Serwer MCP „{{name}}” nie uruchomił się. Uwaga: MobCode nie obsługuje jeszcze uwierzytelniania MCP.",
   "error.chain.providerAuthFailed": "Uwierzytelnianie dostawcy nie powiodło się ({{provider}}): {{message}}",

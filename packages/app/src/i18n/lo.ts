@@ -392,7 +392,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} ຂອງ {{total}} ຖືກເປີດໃຊ້",
   "dialog.mcp.empty": "ບໍ່ມີ MCPs ທີ່ຖືກຕັ້ງຄ່າ",
   "dialog.lsp.empty": "LSPs ກວດພົບອັດຕະໂນມັດຈາກປະເພດໄຟລ໌",
-  "dialog.plugins.empty": "ປລັກອິນຖືກຕັ້ງຄ່າໃນ opencode.json",
+  "dialog.plugins.empty": "ປລັກອິນຖືກຕັ້ງຄ່າໃນ mobcode.json",
   "mcp.status.connected": "ເຊື່ອມຕໍ່",
   "mcp.status.failed": "ລົ້ມເຫລວ",
   "mcp.status.needs_auth": "ຕ້ອງການການຮັບຮອງ",
@@ -657,7 +657,7 @@ export const dict = {
   "error.chain.responseBody": "ເນື້ອໃນການຕອບສະໜອງ:\n{{body}}",
   "error.chain.didYouMean": "ເຈົ້າຫມາຍຄວາມວ່າ: {{suggestions}}",
   "error.chain.modelNotFound": "ບໍ່ພົບໂມເດວ: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "ກວດເບິ່ງການຕັ້ງຄ່າ (opencode.json) ຜູ້ໃຫ້ບໍລິການ/ຊື່ແບບຈໍາລອງຂອງທ່ານ",
+  "error.chain.checkConfig": "ກວດເບິ່ງການຕັ້ງຄ່າ (mobcode.json) ຜູ້ໃຫ້ບໍລິການ/ຊື່ແບບຈໍາລອງຂອງທ່ານ",
   "error.chain.mcpFailed": 'ເຊີບເວີ MCP "{{name}}" ລົ້ມເຫລວ. ໝາຍເຫດ, MobCode ບໍ່ຮອງຮັບການພິສູດຢືນຢັນ MCP ເທື່ອ.',
   "error.chain.providerAuthFailed": "ການພິສູດຢືນຢັນຜູ້ໃຫ້ບໍລິການລົ້ມເຫລວ ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

@@ -399,7 +399,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} ގެ {{total}} އެނެބަލްކޮށްފައިވެއެވެ",
   "dialog.mcp.empty": "އެއްވެސް MCPs ކޮންފިގްރޭޓް ކުރެވިފައެއް ނުވެއެވެ",
   "dialog.lsp.empty": "LSPs ފައިލް ވައްތަރުތަކުން އޮޓޯ ޑިޓެކްޓް ކުރެވިފައިވެއެވެ",
-  "dialog.plugins.empty": "opencode.json ގައި ކޮންފިގްރޭޓް ކުރެވިފައިވާ ޕްލަގިންސް",
+  "dialog.plugins.empty": "mobcode.json ގައި ކޮންފިގްރޭޓް ކުރެވިފައިވާ ޕްލަގިންސް",
   "mcp.status.connected": "ގުޅިއްޖެއެވެ",
   "mcp.status.failed": "ފެއިލްވުން",
   "mcp.status.needs_auth": "ބޭނުންވަނީ އޮތޯއެވެ",
@@ -670,7 +670,7 @@ export const dict = {
   "error.chain.responseBody": "ޖަވާބުދާރީވާ ހަށިގަނޑު:\n{{body}} އެވެ",
   "error.chain.didYouMean": "ތިޔަ މާނަކުރީ: {{suggestions}} ހެއްޔެވެ",
   "error.chain.modelNotFound": "މޮޑެލް ނުފެނޭ: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "ތިބާގެ ކޮންފިގް (opencode.json) ޕްރޮވައިޑަރ/މޮޑެލް ނަންތައް ޗެކްކުރުން",
+  "error.chain.checkConfig": "ތިބާގެ ކޮންފިގް (mobcode.json) ޕްރޮވައިޑަރ/މޮޑެލް ނަންތައް ޗެކްކުރުން",
   "error.chain.mcpFailed":
     'MCP ސަރވަރ "{{name}}" ފޭލްވެއްޖެއެވެ. ނޯޓް، MobCode އިން އަދި MCP އޮތެންޓިކޭޝަން އަށް ސަޕޯޓް ނުކުރެއެވެ.',
   "error.chain.providerAuthFailed": "ޕްރޮވައިޑަރ އޮތެންޓިކޭޝަން ފެއިލްވެއްޖެ ({{provider}}): {{message}}",

@@ -397,7 +397,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} af {{total}} virkt",
   "dialog.mcp.empty": "Engar MCPs stilltar",
   "dialog.lsp.empty": "LSPs greind sjálfkrafa úr skráargerðum",
-  "dialog.plugins.empty": "Viðbætur stilltar í opencode.json",
+  "dialog.plugins.empty": "Viðbætur stilltar í mobcode.json",
   "mcp.status.connected": "tengdur",
   "mcp.status.failed": "mistókst",
   "mcp.status.needs_auth": "þarf heimild",
@@ -664,7 +664,7 @@ export const dict = {
   "error.chain.responseBody": "Svarhluti:\n{{body}}",
   "error.chain.didYouMean": "Áttirðu við: {{suggestions}}",
   "error.chain.modelNotFound": "Gerð fannst ekki: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Athugaðu stillingar (opencode.json) þjónustuveitu/módelheiti",
+  "error.chain.checkConfig": "Athugaðu stillingar (mobcode.json) þjónustuveitu/módelheiti",
   "error.chain.mcpFailed": "MCP þjónn „{{name}}“ mistókst. Athugið, MobCode styður ekki MCP auðkenningu ennþá.",
   "error.chain.providerAuthFailed": "Auðkenning veitu mistókst ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

@@ -398,7 +398,7 @@ export const dict: Record<string, string> = {
   "dialog.mcp.description": "{{enabled}} གི་ {{total}} ལྕོགས་ཅན་བཟོ་ཡོདཔ།",
   "dialog.mcp.empty": "MCPsརིམ་སྒྲིག་མ་འབད་བས།",
   "dialog.lsp.empty": "LSPs ཡིག་སྣོད་དབྱེ་བ་ཚུ་ལས་རང་བཞིན་སྐྱོན་འཛིན་འབད་ཡོདཔ།",
-  "dialog.plugins.empty": "opencode.json ནང་རིམ་སྒྲིག་འབད་ཡོད་པའི་པ་ལག་ཨིན་ཚུ།",
+  "dialog.plugins.empty": "mobcode.json ནང་རིམ་སྒྲིག་འབད་ཡོད་པའི་པ་ལག་ཨིན་ཚུ།",
   "mcp.status.connected": "མཐུད་ཡོད།",
   "mcp.status.failed": "མཐར་མ་འཁྱོལ་བ་",
   "mcp.status.needs_auth": "auth དགོཔ་ཨིན།",
@@ -671,7 +671,7 @@ export const dict: Record<string, string> = {
   "error.chain.responseBody": "ལན་འདེབས་ཕུང་པོ།:\n{{body}}",
   "error.chain.didYouMean": "ཁྱོད་ཀྱིས་: {{suggestions}} ཟེར་སླབ་དགོཔ་ཨིན་ན?",
   "error.chain.modelNotFound": "དཔེ་ཚད་འཚོལ་མ་ཐོབ།: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "ཁྱོད་ཀྱི་རིམ་སྒྲིག་ (opencode.json) བྱིན་མི་/དཔེ་ཚད་མིང་ཚུ་ཞིབ་དཔྱད་འབད།",
+  "error.chain.checkConfig": "ཁྱོད་ཀྱི་རིམ་སྒྲིག་ (mobcode.json) བྱིན་མི་/དཔེ་ཚད་མིང་ཚུ་ཞིབ་དཔྱད་འབད།",
   "error.chain.mcpFailed":
     'MCP སར་བར་ "{{name}}" འཐུས་ཤོར་བྱུང་ཡོདཔ། དྲན་འཛིན་ MobCode གིས་ ད་ལྟོ་ཡང་ MCP བདེན་བཤད་ལུ་རྒྱབ་སྐྱོར་མི་འབད།',
   "error.chain.providerAuthFailed": "བྱིན་མི་བདེན་བཤད་འཐུས་ཤོར་བྱུང་ཡོདཔ།({{provider}}): {{message}}",

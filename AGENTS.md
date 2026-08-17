@@ -42,5 +42,6 @@ Before committing, always run `bun run typecheck` and `bun run lint`.
 - Follow existing patterns in sibling files. Do not introduce new patterns without a reason.
 - Persian strings use `rtl` layout. All user-facing text should be in Persian.
 - Config filename stays as `opencode.json` — do not rename it.
+- **Data separation (planned):** separating MobCode's config/data dirs from a real opencode install (`mobcode.json`, `~/.mobcode*`, `.mobcode/`) is documented in [`DATA_SEPARATION.md`](./DATA_SEPARATION.md). Do not start it without following that plan — a partial attempt breaks ~30 config/plugin tests.
 - Keep the original MIT copyright notice from `sst/opencode` in `NOTICE` / `THIRD-PARTY-LICENSES`.
 - Scope rename: `@opencode-ai/*` → target scope. Script it, then manual QA — ~1,300 file references.

@@ -397,7 +397,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}}/{{total}} engedélyezve",
   "dialog.mcp.empty": "Nincs konfigurálva MCP",
   "dialog.lsp.empty": "A LSP automatikusan felismerhető a fájltípusokból",
-  "dialog.plugins.empty": "Az opencode.json fájlban konfigurált beépülő modulok",
+  "dialog.plugins.empty": "Az mobcode.json fájlban konfigurált beépülő modulok",
   "mcp.status.connected": "csatlakoztatva",
   "mcp.status.failed": "sikertelen",
   "mcp.status.needs_auth": "hitelesítést igényel",
@@ -665,7 +665,7 @@ export const dict = {
   "error.chain.responseBody": "Válasz törzse:\n{{body}}",
   "error.chain.didYouMean": "Erre gondolt: {{suggestions}}?",
   "error.chain.modelNotFound": "A modell nem található: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Ellenőrizze a konfigurációs (opencode.json) szolgáltató/modell nevét",
+  "error.chain.checkConfig": "Ellenőrizze a konfigurációs (mobcode.json) szolgáltató/modell nevét",
   "error.chain.mcpFailed":
     'A "{{name}}" MCP szerver meghibásodott. Megjegyzés: a MobCode még nem támogatja a MCP hitelesítést.',
   "error.chain.providerAuthFailed": "A szolgáltató hitelesítése nem sikerült ({{provider}}): {{message}}",

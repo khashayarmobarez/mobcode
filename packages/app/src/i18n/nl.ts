@@ -394,7 +394,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} of {{total}} ingeschakeld",
   "dialog.mcp.empty": "Geen MCP's geconfigureerd",
   "dialog.lsp.empty": "LSP's worden automatisch gedetecteerd uit bestandstypen",
-  "dialog.plugins.empty": "Plug-ins geconfigureerd in opencode.json",
+  "dialog.plugins.empty": "Plug-ins geconfigureerd in mobcode.json",
   "mcp.status.connected": "verbonden",
   "mcp.status.failed": "mislukt",
   "mcp.status.needs_auth": "heeft autorisatie nodig",
@@ -668,7 +668,7 @@ export const dict = {
   "error.chain.responseBody": "Antwoordtekst:\n{{body}}",
   "error.chain.didYouMean": "Bedoelde je: {{suggestions}}",
   "error.chain.modelNotFound": "Model niet gevonden: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Controleer de provider- en modelnamen in je configuratie (opencode.json)",
+  "error.chain.checkConfig": "Controleer de provider- en modelnamen in je configuratie (mobcode.json)",
   "error.chain.mcpFailed": 'MCP-server "{{name}}" is mislukt. Let op: MobCode ondersteunt nog geen MCP-authenticatie.',
   "error.chain.providerAuthFailed": "Authenticatie bij aanbieder mislukt ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":

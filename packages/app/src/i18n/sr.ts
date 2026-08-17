@@ -393,7 +393,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} од {{total}} омогућено",
   "dialog.mcp.empty": "Нема конфигурисаних MCP",
   "dialog.lsp.empty": "LSPс аутоматски детектован из типова датотека",
-  "dialog.plugins.empty": "Додаци конфигурисани у opencode.json",
+  "dialog.plugins.empty": "Додаци конфигурисани у mobcode.json",
   "mcp.status.connected": "повезан",
   "mcp.status.failed": "није успело",
   "mcp.status.needs_auth": "потребан је аутх",
@@ -661,7 +661,7 @@ export const dict = {
   "error.chain.responseBody": "Тело одговора:\n{{body}}",
   "error.chain.didYouMean": "Да ли сте мислили: {{suggestions}}",
   "error.chain.modelNotFound": "Модел није пронађен: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Проверите имена добављача/модела конфигурације (opencode.json).",
+  "error.chain.checkConfig": "Проверите имена добављача/модела конфигурације (mobcode.json).",
   "error.chain.mcpFailed":
     "MCP сервер „{{name}}“ није успео. Напомена, MobCode још увек не подржава MCP аутентификацију.",
   "error.chain.providerAuthFailed": "аутентификација добављача није успела ({{provider}}): {{message}}",

@@ -393,7 +393,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} no {{total}} ieslēgti",
   "dialog.mcp.empty": "Nav konfigurētu MCP",
   "dialog.lsp.empty": "LSP automātiski noteikti pēc failu tipiem",
-  "dialog.plugins.empty": "Spraudņi konfigurēti opencode.json",
+  "dialog.plugins.empty": "Spraudņi konfigurēti mobcode.json",
   "mcp.status.connected": "savienots",
   "mcp.status.failed": "neizdevās",
   "mcp.status.needs_auth": "nepieciešama autorizācija",
@@ -661,7 +661,7 @@ export const dict = {
   "error.chain.responseBody": "Atbildes saturs:\n{{body}}",
   "error.chain.didYouMean": "Vai domājāt: {{suggestions}}",
   "error.chain.modelNotFound": "Modelis nav atrasts: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Pārbaudiet konfigurāciju (opencode.json) pakalpojuma/modela nosaukumus",
+  "error.chain.checkConfig": "Pārbaudiet konfigurāciju (mobcode.json) pakalpojuma/modela nosaukumus",
   "error.chain.mcpFailed":
     'MCP serveris "{{name}}" neizdevās. Ņemiet vērā, MobCode vēl neatbalsta MCP autentifikāciju.',
   "error.chain.providerAuthFailed": "Pakalpojuma autentifikācija neizdevās ({{provider}}): {{message}}",

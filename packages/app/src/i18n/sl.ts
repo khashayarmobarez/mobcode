@@ -392,7 +392,7 @@ export const dict = {
   "dialog.mcp.description": "{{enabled}} od {{total}} omogočen",
   "dialog.mcp.empty": "MCP-ji niso konfigurirani",
   "dialog.lsp.empty": "LSP-ji samodejno zaznani glede na vrste datotek",
-  "dialog.plugins.empty": "Vtičniki, konfigurirani v opencode.json",
+  "dialog.plugins.empty": "Vtičniki, konfigurirani v mobcode.json",
   "mcp.status.connected": "povezan",
   "mcp.status.failed": "ni uspelo",
   "mcp.status.needs_auth": "potrebuje avt",
@@ -662,7 +662,7 @@ export const dict = {
   "error.chain.responseBody": "Telo odgovora:\n{{body}}",
   "error.chain.didYouMean": "Ste mislili: {{suggestions}}",
   "error.chain.modelNotFound": "Modela ni bilo mogoče najti: {{provider}}/{{model}}",
-  "error.chain.checkConfig": "Preverite imena ponudnikov/modelov konfiguracije (opencode.json).",
+  "error.chain.checkConfig": "Preverite imena ponudnikov/modelov konfiguracije (mobcode.json).",
   "error.chain.mcpFailed": 'MCP strežnik "{{name}}" ni uspel. Opomba, MobCode še ne podpira avtentikacije MCP.',
   "error.chain.providerAuthFailed": "Preverjanje pristnosti ponudnika ni uspelo ({{provider}}): {{message}}",
   "error.chain.providerInitFailed":
