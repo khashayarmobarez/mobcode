@@ -24,7 +24,7 @@ describe("desktop renderer initialization", () => {
       throw new Error("expected initialization to fail")
     } catch (failure) {
       expect(failure).toBe(error)
-      expect((failure as Error).message).toBe("Cannot migrate session_message projections")
+      expect(failure instanceof Error ? failure.message : undefined).toBe("Cannot migrate session_message projections")
     }
   })
 

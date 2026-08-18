@@ -1,5 +1,11 @@
 # Data Separation Plan — MobCode ↔ OpenCode
 
+> [!NOTE]
+> **Status: EXECUTED.** All steps below are complete on `main` (Aug 2026): global dirs are
+> `~/.mobcode*`, config filename is `mobcode.json(c)`, project config dir is `.mobcode/`,
+> `.opencode-version` is `.mobcode-version`, test fixtures and the repo's own `.opencode/`
+> were migrated. The section below is kept as the historical record of what changed.
+
 Goal: make **MobCode** (this fork) fully independent from a real **opencode** install on the same machine — its own global config, its own data/cache/auth directories, and its own project-config directory.
 
 ## Current state (before this plan is executed)

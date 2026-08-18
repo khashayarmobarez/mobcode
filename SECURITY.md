@@ -23,7 +23,7 @@ If you need true isolation, run Mobarrez Code inside a Docker container or VM.
 Server mode is opt-in only. When enabled, set `OPENCODE_SERVER_PASSWORD` to require HTTP Basic Auth. Without this, the server runs unauthenticated (with a warning). It is the end user's responsibility to secure the server — any functionality it provides is not a vulnerability.
 
 > [!NOTE]
-> The config filename stays as `opencode.json` for compatibility with the upstream resolution logic. Do not rename it.
+> The config filename is `mobcode.json` (`mobcode.jsonc`), project config lives under `.mobcode/`, and global config/data/cache under `~/.config/mobcode`, `~/.local/share/mobcode`, `~/.cache/mobcode` — separated from any real opencode install per [`DATA_SEPARATION.md`](./DATA_SEPARATION.md).
 
 ### Out of Scope
 

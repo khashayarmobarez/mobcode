@@ -236,7 +236,7 @@ These are abbreviated from [`AGENTS.md`](./AGENTS.md) and the per-package `AGENT
 
 - All user-facing text should be in **Persian**, with `dir="rtl"` layout.
 - Persian strings use the `rtl` layout.
-- The **config filename stays `opencode.json`** — do not rename it. It's wired deep into config resolution.
+- The **config filename is `mobcode.json`** (`mobcode.jsonc`), the project config dir is `.mobcode/`, and global config/data/cache live under `~/.config/mobcode`, `~/.local/share/mobcode`, `~/.cache/mobcode` — fully separated from a real opencode install per [`DATA_SEPARATION.md`](./DATA_SEPARATION.md). The only intentional `opencode` strings left in source are the provider ID, `OPENCODE_*` env vars, URLs, the `@opencode-ai/*` scope, package names, and legacy-cleanup paths.
 - Never change existing English copy or English i18n keys to facilitate translation. English is the semantic source of truth; adapt locale translations around it.
 - Use Unicode CLDR, Microsoft/Apple/Mozilla localization style guides, and the relevant Persian language authority (e.g. Persian Academy) to verify terminology — do not translate from model knowledge alone.
 

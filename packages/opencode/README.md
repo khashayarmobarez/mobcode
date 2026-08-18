@@ -2,7 +2,7 @@
 
 The core of Mobarrez Code: the CLI binary, the terminal UI (TUI), the headless API server, and most of the agent business logic.
 
-This is a fork of the upstream `packages/opencode` from [`sst/opencode`](https://github.com/sst/opencode) (MIT), rebranded as **Mobarrez Code** for Persian-speaking users. The folder and binary name are kept as `opencode` to preserve compatibility with config resolution (`opencode.json`) and existing tooling; see the root [AGENTS.md](../../AGENTS.md) for the rationale.
+This is a fork of the upstream `packages/opencode` from [`sst/opencode`](https://github.com/sst/opencode) (MIT), rebranded as **Mobarrez Code** for Persian-speaking users. The folder name is kept as `opencode`, but the binary is `mobcode` and config resolution uses `mobcode.json` / `.mobcode/` with global dirs under `~/.config/mobcode`, `~/.local/share/mobcode`, and `~/.cache/mobcode` — fully separated from a real opencode install; see [`DATA_SEPARATION.md`](../../DATA_SEPARATION.md).
 
 ## What lives here
 
@@ -10,10 +10,10 @@ This is a fork of the upstream `packages/opencode` from [`sst/opencode`](https:/
 - `src/server/` — the headless HTTP/SSE API server (default port 4096).
 - `src/session/` — session lifecycle, LLM orchestration, and tool execution.
 - `src/tool/` — the built-in tools the agent can call (file edits, bash, etc.).
-- `src/config/` — config resolution (reads `opencode.json` / `opencode.jsonc`).
+- `src/config/` — config resolution (reads `mobcode.json` / `mobcode.jsonc`).
 - `src/plugin/` — plugin loader and runtime.
 - `src/mcp/` — Model Context Protocol client (stdio + remote SSE + OAuth).
-- `bin/opencode` — the CLI entrypoint.
+- `bin/mobcode.cjs` — the CLI entrypoint.
 
 ## Run (development)
 

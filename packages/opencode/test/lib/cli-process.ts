@@ -8,7 +8,7 @@
 // Configuration flows through opencode's built-in test affordances:
 //   - OPENCODE_CONFIG_CONTENT      : provider config inline, no files to find
 //   - OPENCODE_TEST_HOME           : pins os.homedir() → tmpdir
-//   - OPENCODE_DISABLE_PROJECT_CONFIG : skip walking up for opencode.json
+//   - OPENCODE_DISABLE_PROJECT_CONFIG : skip walking up for mobcode.json
 //   - OPENCODE_PURE                : skip external plugin discovery + install
 //   - OPENCODE_DISABLE_AUTOUPDATE / AUTOCOMPACT / MODELS_FETCH : no background work
 // Plus HOME / XDG_* pointing at the tmpdir for belt-and-suspenders isolation.

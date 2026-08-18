@@ -1,9 +1,9 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "opencode",
+    "title": "mobcode",
     "version": "1.0.0",
-    "description": "opencode api"
+    "description": "mobcode api"
   },
   "paths": {
     "/auth/{providerID}": {

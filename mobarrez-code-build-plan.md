@@ -60,11 +60,16 @@ Steps are tagged **[You]** for account/legal/business actions only a human can d
   Also keep the separate `LICENSE` files under `packages/ui`, `packages/http-recorder`,
   `packages/docs` if you ship those packages.
   ```
-- [ ] **[You]** Decision: keep the config filename as `opencode.json` (recommended — it's
+- [x] **[You]** Decision: keep the config filename as `opencode.json` (recommended — it's
   ```
   wired deep into config resolution, and renaming it breaks compatibility with every
   doc/example a user might reference for zero user-facing benefit).
   ```
+  > **Decided:** the fork renamed it after all — MobCode now uses `mobcode.json` /
+  > `mobcode.jsonc`, `.mobcode/` project dirs, and `~/.config/mobcode`,
+  > `~/.local/share/mobcode`, `~/.cache/mobcode` global dirs, so MobCode and a real
+  > opencode install never share config/data on the same machine. See
+  > [`DATA_SEPARATION.md`](./DATA_SEPARATION.md) for the executed plan.
 
 ---
 
